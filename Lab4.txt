@@ -1,0 +1,120 @@
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);//uses "input" as new Scanner
+		System.out.println("Welcome to my Java Tic Tac Toe game!");
+		System.out.println("Are you ready to play?(y/n)");
+		
+		String initiate = input.next();
+		String begin = "y";
+		if (initiate.equals(begin)){//begins TicTacToe game; 
+			
+			//Instructions for the game
+			System.out.println("This is a 2 player game.");
+			System.out.println("User 1 will be 'x' and User 2 will be 'o' ");
+			System.out.println("To play, the user will select the row and column they would like to mark");
+			
+			//initializing array for game board
+			//We used more than 3 to make game board appealing to user
+			String [] row1=   {" ", "|", " ", "|", " ",};
+			String [] line=   {"-", "+", "-", "+", "-",};
+			String [] row2=   {" ", "|", " ", "|", " ",};
+		//  String [] line=   {"-", "+", "-", "+", "-",}; // Make it easier to understand building tictactoe board
+			String [] row3=   {" ", "|", " ", "|", " ",};
+			
+			//Prints all arrays
+			for (int i=0; i<row1.length; i++) {
+				System.out.print(row1[i]);
+			}
+			System.out.println();
+			for (int i=0; i<line.length; i++) {
+				System.out.print(line[i]);
+			}
+			System.out.println();
+			for (int i=0; i<row2.length; i++) {
+				System.out.print(row2[i]);
+			}
+			System.out.println();
+			for (int i=0; i<line.length; i++) {
+				System.out.print(line[i]);
+			}
+			System.out.println();
+			for (int i=0; i<row3.length; i++) {
+				System.out.print(row3[i]);
+			}
+			System.out.println();
+			
+			int rowSelection;
+			int colSelection;
+			
+			//First turn
+			System.out.println("User 1, your turn!");
+			System.out.println("Which row would you like to mark?(1-3)");
+			rowSelection= input.nextInt(); 
+			if (rowSelection==1) {
+				System.out.println("Which column would you like to mark?(1-3)");
+				colSelection=input.nextInt();
+				if (colSelection==1) {//Arrays start at 0,so column must be adjusted
+					colSelection--;
+				}
+				if (colSelection==3) {//Arrays start at 0,so column must be adjusted
+					colSelection++;
+				}
+				row1[colSelection]="x";//places marker at specific square user requested
+			}
+			if (rowSelection==2) {
+				System.out.println("Which column would you like to mark?(1-3)");
+				colSelection=input.nextInt();
+				if (colSelection==1) {//Arrays start at 0,so column must be adjusted
+					colSelection--;
+				}
+				if (colSelection==3) {//Arrays start at 0,so column must be adjusted
+					colSelection++;
+				}
+				row2[colSelection]="x";//places marker at specific square user requested
+			}
+			if (rowSelection==3) {
+				System.out.println("Which column would you like to mark?(1-3)");
+				colSelection=input.nextInt();
+				if (colSelection==1) {//Arrays start at 0,so column must be adjusted
+					colSelection--;
+				}
+				if (colSelection==3) {//Arrays start at 0,so column must be adjusted
+					colSelection++;
+				}
+				row3[colSelection]="x";//places marker at specific square user requested
+			}
+			
+			//prints all arrays (Gameboard) after first turn
+			
+			for (int i=0; i<row1.length; i++) {
+				System.out.print(row1[i]);
+			}
+			System.out.println();
+			for (int i=0; i<line.length; i++) {
+				System.out.print(line[i]);
+			}
+			System.out.println();
+			for (int i=0; i<row2.length; i++) {
+				System.out.print(row2[i]);
+			}
+			System.out.println();
+			for (int i=0; i<line.length; i++) {
+				System.out.print(line[i]);
+			}
+			System.out.println();
+			for (int i=0; i<row3.length; i++) {
+				System.out.print(row3[i]);
+			}
+			System.out.println();
+			
+			
+		}
+		else {//ends program if user does not want to play
+			
+		}
+		
+		
+		
+
+		
+	}
